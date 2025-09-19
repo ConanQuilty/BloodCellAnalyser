@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="group.bloodcellanalyser.AppController">
+   <children>
+      <MenuBar layoutY="1.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#openImage" text="Open" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Actions">
+              <items>
+                  <MenuItem mnemonicParsing="false" onAction="#runFullProcess" text="Run Fully" />
+                  <MenuItem mnemonicParsing="false" text="__________________" />
+                  <MenuItem mnemonicParsing="false" onAction="#revertToBase" text="Revert to base image" />
+                <MenuItem mnemonicParsing="false" onAction="#imageRedBlue" text="Red Blue" />
+                  <MenuItem mnemonicParsing="false" onAction="#countCells" text="Count Cells" />
+                  <MenuItem mnemonicParsing="false" onAction="#removeNoise" text="Remove Noise" />
+                  <MenuItem mnemonicParsing="false" onAction="#boxCells" text="Box Cells" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <TextField fx:id="minField" layoutX="9.0" layoutY="76.0" prefHeight="26.0" prefWidth="63.0" promptText="Min" />
+      <TextField fx:id="maxField" layoutX="77.0" layoutY="76.0" prefHeight="26.0" prefWidth="63.0" promptText="Max" />
+      <Label fx:id="noiseLabel" layoutX="9.0" layoutY="30.0" prefHeight="46.0" prefWidth="139.0" text="Enter the min/max sizes of a cell/cluster" wrapText="true" />
+      <AnchorPane fx:id="imageAnchor" layoutX="170.0" layoutY="30.0" prefHeight="457.0" prefWidth="623.0">
+         <children>
+            <ImageView fx:id="imageView" fitHeight="457.0" fitWidth="629.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+      <Label fx:id="redLabel" layoutX="9.0" layoutY="121.0" prefHeight="17.0" prefWidth="128.0" text="Red Count: " />
+      <Label fx:id="whiteLabel" layoutX="9.0" layoutY="138.0" prefHeight="17.0" prefWidth="128.0" text="White Count: " />
+   </children>
+</AnchorPane>
