@@ -3,5 +3,7 @@
 <p>
   This application is designed to process an image and, using disjoint sets, 
   output a count of blood cells and their types with adjustable accuracy.
+  HELLO
+
 </p>
 
